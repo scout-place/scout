@@ -1,6 +1,10 @@
 name: ESLint
 
-on: push
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
 
 jobs:
   build:
@@ -12,6 +16,6 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Install modules
-      run: npx
+      run: npm install
     - name: Run ESLint
-      run: eslint .
+      run: npx eslint .
