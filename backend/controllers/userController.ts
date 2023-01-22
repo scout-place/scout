@@ -1,7 +1,6 @@
 import bcrypt = require("bcrypt");
 
 import { Request, Response } from "express";
-import { User } from "@prisma/client";
 import { UserRepository } from "../repositories/UserRepository";
 
 const userRepository = new UserRepository();
@@ -18,10 +17,9 @@ export class UserController {
         }
     }
 
-    async login(req: Request, res: Response) {
+    async login(req: Request, res: Response): Promise<Response> {
         try {
             const { email, password } = req.body;
-
             const user = await userRepository.getUserByEmail(email);
 
             if (!user) {
@@ -37,7 +35,7 @@ export class UserController {
             return res.status(200).send({ message: "Login successful" });
         } catch (error) {
             console.error(error);
-            res.status(500).send({ message: "Internal server error" });
+            return res.status(500).send({ message: "Internal server error" });
         }
     }
 }

@@ -7,12 +7,14 @@ export class UserRepository {
     async createUser(data: { email: string; username: string; password: string }): Promise<User> {
         const hashedPassword = await bcrypt.hash(data.password, 10);
 
-        return prisma.user.create({
-            data: {
-                ...data,
-                password: hashedPassword,
-            },
-        });
+        return prisma.user
+            .create({
+                data: {
+                    ...data,
+                    password: hashedPassword,
+                },
+            })
+            .then((res) => res);
     }
 
     async getUserByEmail(email: string): Promise<User | null> {
