@@ -15,6 +15,7 @@
     "isolatedModules": true,
     "noEmit": true,
     "outDir": "dist",
+    "esModuleInterop": true,
     "strict": true,
     "jsx": "react-jsx"
   },
