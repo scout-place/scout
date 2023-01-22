@@ -7,7 +7,7 @@ module.exports = {
         '.eslintrc.cjs'
     ],
     rules: {
-        indent: ["error", "4"],
+        indent: ["error", "tab"],
         quotes: ["error", "double"],
         semi: ["error", "always"],
         "@typescript-eslint/explicit-function-return-type": "error",
