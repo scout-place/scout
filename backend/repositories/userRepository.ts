@@ -8,8 +8,6 @@ export class UserRepository {
 		const salt = bcrypt.genSaltSync(10);
 		const hashedPassword = await bcrypt.hash(data.password, salt);
 
-		console.log(data.password);
-
 		return prisma.user
 			.create({
 				data: {
