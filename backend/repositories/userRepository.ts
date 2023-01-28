@@ -5,7 +5,10 @@ const prisma = new PrismaClient();
 
 export class UserRepository {
     async createUser(data: { email: string; username: string; password: string }): Promise<User> {
-        const hashedPassword = await bcrypt.hash(data.password, 10);
+        const salt = bcrypt.genSaltSync(10);
+        const hashedPassword = await bcrypt.hash(data.password, salt);
+
+        console.log(data.password);
 
         return prisma.user
             .create({
