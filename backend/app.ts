@@ -11,7 +11,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use("/api/v1", userRouter);
 
 app.get("/", (_, res) => {
-    res.status(200).send("Hello world");
+	res.status(200).send("Hello world");
 });
 
 app.set("port", process.env.PORT || port);
