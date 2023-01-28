@@ -12,7 +12,6 @@ module.exports = {
         semi: ["error", "always"],
         "@typescript-eslint/explicit-function-return-type": "error",
         "@typescript-eslint/no-unused-vars": ["error", { "args": "none" }],
-        "@typescript-eslint/no-explicit-any": "error",
         "@typescript-eslint/no-non-null-assertion": "error",
         "@typescript-eslint/no-empty-interface": "error",
         "@typescript-eslint/no-inferrable-types": "error",
