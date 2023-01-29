@@ -1,7 +1,7 @@
 import { createLogger, format, transports } from "winston";
 import { Request, Response, NextFunction } from "express";
 
-const logger = createLogger({
+export const logger = createLogger({
 	format: format.combine(format.timestamp(), format.json()),
 	transports: [
 		new transports.File({ filename: "core/logs/error.log", level: "error" }),
