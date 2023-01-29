@@ -2,7 +2,7 @@ import express = require("express");
 
 import userRouter from "./routes/user";
 
-import { requestLogger } from "./core/loggers/logger";
+import { requestLogger } from "./core/logger/logger";
 
 const app = express();
 const port = 3000;

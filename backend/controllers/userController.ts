@@ -1,7 +1,7 @@
 import bcrypt = require("bcrypt");
 
 import { Request, Response } from "express";
-import { logger } from "../core/loggers/logger";
+import { logger } from "../core/logger/logger";
 import { UserRepository } from "../repositories/UserRepository";
 
 const userRepository = new UserRepository();
