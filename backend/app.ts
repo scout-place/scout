@@ -1,6 +1,7 @@
 import express = require("express");
 
 import userRouter from "./routes/user";
+import waitlistRouter from "./routes/waitlist";
 
 import { requestLogger } from "./core/logger/logger";
 
@@ -12,6 +13,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(requestLogger);
 
 app.use("/api/v1", userRouter);
+app.use("/api/v1", waitlistRouter);
 
 app.get("/", (_, res) => {
 	res.status(200).send("Hello world");
