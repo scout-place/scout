@@ -2,7 +2,7 @@ const Waitlist = () => {
 	return (
 		<div className="bg-background-image w-full h-screen bg-cover flex justify-center items-center">
 			<div className="w-1/4 h-3/5 flex flex-col items-center justify-start space-y-5 ">
-				<div className="font-extrabold text-transparent text-5xl bg-clip-text bg-gradient-to-b from-[#2B2B2B] to-[#6E6E79]">
+				<div className="font-extrabold text-transparent text-4xl bg-clip-text bg-gradient-to-b from-[#2B2B2B] to-[#6E6E79]">
 					<p>Join the waitlist for</p>
 				</div>
 				<div className="font-Agora font-extrabold text-transparent text-6xl bg-clip-text bg-gradient-to-r from-[#FFAF87] via-[#F170E8] to-[#819FFF] pb-4 px-10">
