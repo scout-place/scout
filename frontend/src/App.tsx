@@ -1,7 +1,9 @@
+import Waitlist from "./components/pages/Waitlist";
+
 function App() {
 	return (
 		<div className="App">
-			<h1>:sunglasses:</h1>
+			<Waitlist />
 		</div>
 	);
 }
